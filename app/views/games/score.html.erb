@@ -1,0 +1,9 @@
+<h1>Result</h1>
+<%# <%= link_to 'new', root_path, class: 'btn btn-primary' %>
+<% if (@english_word && !@in_grid) %>
+<p>Sorry but <%= params[:word] %> can't be built out of <%= params[:letters] %>
+ <% elsif (@english_word && @in_grid)%>
+<p>Congratulations! <%= params[:word] %> is a valid English world</p>
+<% elsif (@english_word == false)%>
+<p>Sorry but  <%= params[:word] %> does not seem to be a valid English word..
+<% end %>
